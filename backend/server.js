@@ -6,6 +6,7 @@ import {v2 as cloudinary} from "cloudinary";
 
 import authRoutes from "../backend/routes/auth.routes.js";
 import userRoutes from "../backend/routes/user.routes.js";
+import postRoutes from "../backend/routes/post.routes.js";
 
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes); //auth routes and controllers
 app.use("/api/users", userRoutes); //user routes and controllers
+app.use("/api/posts", postRoutes); //post routes and controllers
 
 
 app.listen(process.env.POST || 8000, ()=>{
